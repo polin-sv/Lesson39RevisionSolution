@@ -1,5 +1,14 @@
 ﻿#include "logic.h"
 
 string get_numbers_in_order(int n, int m) {
-	return "";
+	string result = "";
+
+	int d = n > m ? -1 : 1;
+
+	for (int i = n; i != m; i +=d) {
+		result += to_string(i) + " ";
+	}
+	result += to_string(m);
+
+	return result;
 }
