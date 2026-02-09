@@ -6,12 +6,13 @@ string count_likes(int day, int like) {
 		return "Error.";
 	}
 
-	string result;
+	string result = "Day 1: " + to_string(like) + " likes";
 
-	for (int i = 1; i <= day; i++) {
+	for (int i = 2; i <= day; i++) {
 		int likes_per_day = i * like;
-		result += "Day " + to_string(i) + ": "
-			+ to_string(likes_per_day) + " likes\n";
+
+		result += "\nDay " + to_string(i) + ": "
+			+ to_string(likes_per_day) + " likes";
 
 	}
 
